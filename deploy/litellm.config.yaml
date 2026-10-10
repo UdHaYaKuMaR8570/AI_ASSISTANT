@@ -1,0 +1,20 @@
+model_list:
+  - model_name: cloud-openai
+    litellm_params:
+      model: "openai/gpt-4o-mini"
+      api_key: "os.environ/OPENAI_API_KEY"
+  - model_name: cloud-custom
+    litellm_params:
+      model: "openai/${CUSTOM_MODEL}"
+      api_base: "os.environ/CUSTOM_BASE_URL"
+      api_key: "os.environ/CUSTOM_API_KEY"
+  - model_name: local-ollama
+    litellm_params:
+      model: "ollama_chat/qwen3:4b"
+      api_base: "os.environ/OLLAMA_HOST"
+
+litellm_settings:
+  drop_params: true
+
+general_settings:
+  master_key: "os.environ/LITELLM_MASTER_KEY"

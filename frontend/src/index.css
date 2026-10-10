@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --bg-paper: #FAF6F0;
+  --text-ink: #1A1611;
+  --accent-coral: #E05D38;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-paper);
+  color: var(--text-ink);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbars matching the warm paper aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5C4B1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A69B8F;
+}
